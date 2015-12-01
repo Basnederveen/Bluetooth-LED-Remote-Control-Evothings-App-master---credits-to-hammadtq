@@ -10,6 +10,6 @@
 <author email="basnederveen@gmail.com" href="http://evothings.com"> B nederveen, credits to Hammadtq </author>
 <content src="index.html" />
 
-<gap:plugin name="cordova-plugin-bluetooth-serial" source="npm" />
+<gap:plugin name="cordova-plugin-bluetooth-serial" spec="n/a" source="npm" />
 
 </widget>
