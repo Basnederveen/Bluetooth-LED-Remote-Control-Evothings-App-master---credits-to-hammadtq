@@ -7,9 +7,8 @@
 
 <name>BT Lampen</name>
 <description>BT Lampen</description>
-<author email="basnederveen@gmail.com" href="http://evothings.com"> B nederveen, credits to Hammadtq </author>
+<author email="basnederveen@gmail.com" href="http://evothings.com"> Bas Nederveen, credits to Hammadtq </author>
 <content src="index.html" />
-
 
 <plugin name="com.megster.cordova.bluetoothserial" spec="0.3.3" source="pgb" />
 
