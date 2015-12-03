@@ -11,5 +11,8 @@
 <content src="index.html" />
 
 <plugin name="com.megster.cordova.bluetoothserial" spec="0.3.3" source="pgb" />
+  <platform name="android">
+              <icon src="app/lamp.png" density="mdpi" />
 
+     </platform>
 </widget>
