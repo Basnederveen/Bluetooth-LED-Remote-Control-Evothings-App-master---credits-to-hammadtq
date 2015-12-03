@@ -12,7 +12,7 @@
 
 <plugin name="com.megster.cordova.bluetoothserial" spec="0.3.3" source="pgb" />
   <platform name="android">
-              <icon src="app/lamp.png" density="mdpi" />
+              <icon src="app/lamp.jpg" density="mdpi" />
 
      </platform>
 </widget>
