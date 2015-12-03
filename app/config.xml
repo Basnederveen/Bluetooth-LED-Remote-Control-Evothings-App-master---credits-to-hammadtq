@@ -11,5 +11,5 @@
 <content src="index.html" />
 
 <plugin name="com.megster.cordova.bluetoothserial" spec="0.3.3" source="pgb" />
-<icon src="Bluetooth-LED-Remote-Control-Evothings-App-master---credits-to-hammadtq/app/lamp.png" />
+<icon src="lamp.png" />
 </widget>
