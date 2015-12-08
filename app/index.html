@@ -121,7 +121,7 @@ app.ledOn3 = function(){
 		bluetoothSerial.write("e");
 		}else{
 		bluetoothSerial.disconnect(app.ondisconnect);
-		var device = "20:15:09:23.10.93";
+		var device = "20:15:09:23:10:93";
 		console.log("Requesting connection to " + device);
       		bluetoothSerial.connect(device, app.onconnect, app.ondisconnect);     
 	     	setTimeout(function(){bluetoothSerial.write("e");},5000);
@@ -135,7 +135,7 @@ app.ledOff3 = function(){
 		bluetoothSerial.write("f");
 		}else{
 		bluetoothSerial.disconnect(app.ondisconnect);
-		var device = "20:15:09:23.10.93";
+		var device = "20:15:09:23:10:93";
 		console.log("Requesting connection to " + device);
       		bluetoothSerial.connect(device, app.onconnect, app.ondisconnect);     
 	     	setTimeout(function(){bluetoothSerial.write("f");},5000);

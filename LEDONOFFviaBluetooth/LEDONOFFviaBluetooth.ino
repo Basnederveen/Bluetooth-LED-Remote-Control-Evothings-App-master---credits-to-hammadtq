@@ -31,9 +31,9 @@ void loop()
     Serial.println(inputString);
     while (Serial.available() > 0)  
     { junk = Serial.read() ; }      // clear the serial buffer
-    if(inputString == "a"){         //in case of 'a' turn the LED on
+    if(inputString == "e"){         //in case of 'a' turn the LED on
       digitalWrite(12, HIGH);  
-    }else if(inputString == "b"){   //incase of 'b' turn the LED off
+    }else if(inputString == "f"){   //incase of 'b' turn the LED off
       digitalWrite(12, LOW);
     }
     inputString = "";
