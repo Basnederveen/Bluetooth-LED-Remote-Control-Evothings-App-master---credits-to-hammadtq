@@ -35,15 +35,11 @@
  	<div data-role="main" class="ui-content">      
         <div id="colorScreen">
             
-            <button class="green wide" onclick="app.ledOn()">Lamp bank aan</button>
+            <button class="green wide" onclick="app.ledOn()">Lamp aan</button>
 
 
-			<button class="red wide" onclick="app.ledOff()">Lamp bank uit</button>
-           <button class="green wide" onclick="app.ledOn2()">Lamp keuken aan</button>
+			<button class="red wide" onclick="app.ledOff()">Lamp uit</button>
 
-
-			<button class="red wide" onclick="app.ledOff2()">Lamp keuken uit</button>
-          
             <button class="yellow wide" id="disconnectButton" onclick="app.disconnect()">Disconnect</button>
             
         </div>
@@ -54,20 +50,20 @@
         <script type="text/javascript">
 var switch1 = false;
 var switch2 = false;
-var switch3 = false;
+
             app.initialize();
+
             app.ledOn = function(){
 		if(switch1 == true){
 		bluetoothSerial.write("a");
 		}else{
 		bluetoothSerial.disconnect(app.ondisconnect);
-		var device = "20:15:09:23:10:80";
+		var device = "20:15:09:23:10:93";
 		console.log("Requesting connection to " + device);
       		bluetoothSerial.connect(device, app.onconnect, app.ondisconnect);     
 	     	setTimeout(function(){bluetoothSerial.write("a");},5000);
 		switch1 = true;
-		switch2 = false;
-		switch3 = false;
+
 		}
             }
             app.ledOff = function(){
@@ -75,71 +71,15 @@ var switch3 = false;
 		bluetoothSerial.write("b");
 		}else{
 		bluetoothSerial.disconnect(app.ondisconnect);
-		var device = "20:15:09:23:10:80";
+		var device = "20:15:09:23:10:93";
 		console.log("Requesting connection to " + device);
       		bluetoothSerial.connect(device, app.onconnect, app.ondisconnect);     
 	     	setTimeout(function(){bluetoothSerial.write("b");},5000);
 		switch1 = true;
-		switch2 = false;
-		switch3 = false;
+
 		}
             }
-            app.ledOn2 = function(){
-            	            	if(switch2 == true){
-		bluetoothSerial.write("c");
-		}else{
-		bluetoothSerial.disconnect(app.ondisconnect);
-		var device = "20:15:09:28:00:96";
-		console.log("Requesting connection to " + device);
-      		bluetoothSerial.connect(device, app.onconnect, app.ondisconnect);     
-	     	setTimeout(function(){bluetoothSerial.write("c");},5000);
-		switch2 = true;
-		switch1 = false;
-switch3 = false;
-		}
-            }
-            app.ledOff2 = function(){
-            	            	if(switch2 == true){
-		bluetoothSerial.write("d");
-		}else{
-		bluetoothSerial.disconnect(app.ondisconnect);
-		var device = "20:15:09:28:00:96";
-		console.log("Requesting connection to " + device);
-      		bluetoothSerial.connect(device, app.onconnect, app.ondisconnect);     
-	     	setTimeout(function(){bluetoothSerial.write("d");},5000);
-		switch2 = true;
-		switch1 = false;
-switch3 = false;		
-}
-            }
-app.ledOn3 = function(){
-            	            	if(switch3 == true){
-		bluetoothSerial.write("e");
-		}else{
-		bluetoothSerial.disconnect(app.ondisconnect);
-		var device = "20:15:09:23:10:93";
-		console.log("Requesting connection to " + device);
-      		bluetoothSerial.connect(device, app.onconnect, app.ondisconnect);     
-	     	setTimeout(function(){bluetoothSerial.write("e");},5000);
-		switch3 = true;
-		switch1 = false;
-switch2 = false;		
-}
-            }
-app.ledOff3 = function(){
-            	            	if(switch3 == true){
-		bluetoothSerial.write("f");
-		}else{
-		bluetoothSerial.disconnect(app.ondisconnect);
-		var device = "20:15:09:23:10:93";
-		console.log("Requesting connection to " + device);
-      		bluetoothSerial.connect(device, app.onconnect, app.ondisconnect);     
-	     	setTimeout(function(){bluetoothSerial.write("f");},5000);
-		switch3 = true;
-		switch1 = false;
-switch2 = false;	
-}
-            }
+            
         </script>
         </div>
         

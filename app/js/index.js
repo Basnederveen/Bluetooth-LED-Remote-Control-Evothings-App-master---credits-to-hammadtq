@@ -43,8 +43,7 @@ var app = {
         app.setStatus("Disconnecting...");
         bluetoothSerial.disconnect(app.ondisconnect);
 	switch1 = false;
-	switch2 = false;
-	switch3 = false;
+
     },
     onconnect: function() {
         connectionScreen.hidden = true;
